@@ -22,10 +22,11 @@ services:
         image: quay.io/prometheus/node-exporter:v1.1.2
         container_name: nodeexporter
         volumes:
-          - '/:/host:ro,rslave'
-        pid: host
+          - /proc:/host/proc:ro
+          - /sys:/host/sys:ro
         command:
-          - '--path.rootfs=/host'
+          - '--path.procfs=/host/proc'
+          - '--path.sysfs=/host/sys'
         restart: unless-stopped
         ports:
           - 9100:9100
@@ -42,6 +43,7 @@ services:
         image: grafana/grafana
         depends_on:
           - prometheus
+          - loki
         ports:
           - 3000:3000
         environment:
@@ -49,6 +51,7 @@ services:
           - GF_USERS_ALLOW_SIGN_UP=false
         links:
           - prometheus:prometheus
+          - loki:loki
     importer:
       image: giantswarm/tiny-tools
       depends_on:
@@ -59,3 +62,14 @@ services:
         - ./grafana:/opt/grafana-import-dashboards
       links:
         - grafana:grafana
+    loki:
+        image: grafana/loki:2.9.0
+        ports:
+          - 3100:3100
+        command: -config.file=/etc/loki/local-config.yaml
+    promtail:
+        image: grafana/promtail:2.9.0
+        volumes:
+          - /var/lib/docker/containers:/var/lib/docker/containers:ro
+          - /var/log:/var/log
+        command: -config.file=/etc/promtail/config.yml
