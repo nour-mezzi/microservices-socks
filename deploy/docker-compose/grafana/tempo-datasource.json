@@ -1,0 +1,26 @@
+{
+  "name": "tempo",
+  "type": "tempo",
+  "url": "http://tempo:3200",
+  "access": "proxy",
+  "basicAuth": false,
+  "jsonData": {
+    "tracesToLogsV2": {
+      "datasourceUid": "loki",
+      "spanStartTimeShift": "-1h",
+      "spanEndTimeShift": "1h",
+      "filterByTraceID": true,
+      "filterBySpanID": false
+    },
+    "serviceMap": {
+      "datasourceUid": "prometheus"
+    },
+    "nodeGraph": {
+      "enabled": true
+    },
+    "tracesToMetrics": {
+      "datasourceUid": "prometheus",
+      "tags": [{"key": "service.name", "value": "service"}]
+    }
+  }
+}
