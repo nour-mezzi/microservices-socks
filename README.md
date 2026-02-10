@@ -27,5 +27,15 @@ We'd love to see community contributions. We like to keep it simple and use Gith
 Use [Weave Scope](http://weave.works/products/weave-scope/) or [Weave Cloud](http://cloud.weave.works/) to visualize the application once it's running in the selected [target platform](./deploy/).
 
 ![Sock Shop in Weave Scope](https://github.com/microservices-demo/microservices-demo.github.io/raw/master/assets/sockshop-scope.png)
-
 ## 
+# Observability
+Stack: 
+Grafana (port 3000) visualizes metrics from Prometheus (9090) 
+logs from Loki (3100) via Promtail
+traces from Tempo (3200) 
+Tracing: 
+Java services send Zipkin-format traces to Tempo:9411; Tempo generates service-graph metrics to Prometheus architecture-documentation.md:176-188 architecture-documentation.md:145-174 .
+Access: 
+Grafana UI at http://localhost:3000 (admin/foobar); 
+use Explore > Tempo > Service Graph to view dependencies architecture-documentation.md:227-235 .
+#
