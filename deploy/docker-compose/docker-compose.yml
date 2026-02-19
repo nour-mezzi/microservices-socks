@@ -8,6 +8,12 @@ services:
     cap_drop:
       - all
     read_only: true
+    environment:
+      - OTEL_SERVICE_NAME=front-end
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=otlp
+      - NODE_OPTIONS=--require @opentelemetry/auto-instrumentations-node/register
   edge-router:
     image: weaveworksdemos/edge-router:0.1.1
     ports:
@@ -26,6 +32,8 @@ services:
       - /var/run:rw,noexec,nosuid
     hostname: edge-router
     restart: always
+    environment:
+      - OTEL_SERVICE_NAME=edge-router
   catalogue:
     image: weaveworksdemos/catalogue:0.3.5
     hostname: catalogue
@@ -35,6 +43,10 @@ services:
     cap_add:
       - NET_BIND_SERVICE
     read_only: true
+    environment:
+      - OTEL_SERVICE_NAME=catalogue
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_TRACES_EXPORTER=otlp
   catalogue-db:
     image: weaveworksdemos/catalogue-db:0.3.0
     hostname: catalogue-db
@@ -54,8 +66,14 @@ services:
     read_only: true
     tmpfs:
       - /tmp:rw,noexec,nosuid
+    volumes:
+      - /home/user/otel/opentelemetry-javaagent.jar:/otel/opentelemetry-javaagent.jar
     environment:
       - JAVA_OPTS=-Xms64m -Xmx128m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom -Dspring.zipkin.enabled=true -Dspring.zipkin.baseUrl=http://tempo:9411 -Dspring.sleuth.sampler.percentage=1.0
+      - JAVA_TOOL_OPTIONS=-javaagent:/otel/opentelemetry-javaagent.jar
+      - OTEL_SERVICE_NAME=carts
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
   carts-db:
     image: mongo:3.4
     hostname: carts-db
@@ -80,8 +98,14 @@ services:
     read_only: true
     tmpfs:
       - /tmp:rw,noexec,nosuid
+    volumes:
+      - /home/user/otel/opentelemetry-javaagent.jar:/otel/opentelemetry-javaagent.jar
     environment:
       - JAVA_OPTS=-Xms64m -Xmx128m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom -Dspring.zipkin.enabled=true -Dspring.zipkin.baseUrl=http://tempo:9411 -Dspring.sleuth.sampler.percentage=1.0
+      - JAVA_TOOL_OPTIONS=-javaagent:/otel/opentelemetry-javaagent.jar
+      - OTEL_SERVICE_NAME=orders
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
   orders-db:
     image: mongo:3.4
     hostname: orders-db
@@ -106,13 +130,20 @@ services:
     read_only: true
     tmpfs:
       - /tmp:rw,noexec,nosuid
+    volumes:
+      - /home/user/otel/opentelemetry-javaagent.jar:/otel/opentelemetry-javaagent.jar
     environment:
       - JAVA_OPTS=-Xms64m -Xmx128m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom -Dspring.zipkin.enabled=true -Dspring.zipkin.baseUrl=http://tempo:9411 -Dspring.sleuth.sampler.percentage=1.0
+      - JAVA_TOOL_OPTIONS=-javaagent:/otel/opentelemetry-javaagent.jar
+      - OTEL_SERVICE_NAME=shipping
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
   queue-master:
     image: weaveworksdemos/queue-master:0.3.1
     hostname: queue-master
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /home/user/otel/opentelemetry-javaagent.jar:/otel/opentelemetry-javaagent.jar
     restart: always
     cap_drop:
       - all
@@ -121,6 +152,11 @@ services:
     read_only: true
     tmpfs:
       - /tmp:rw,noexec,nosuid
+    environment:
+      - JAVA_TOOL_OPTIONS=-javaagent:/otel/opentelemetry-javaagent.jar
+      - OTEL_SERVICE_NAME=queue-master
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
   rabbitmq:
     image: rabbitmq:3.6.8
     hostname: rabbitmq
@@ -142,6 +178,10 @@ services:
     cap_add:
       - NET_BIND_SERVICE
     read_only: true
+    environment:
+      - OTEL_SERVICE_NAME=payment
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_TRACES_EXPORTER=otlp
   user:
     image: weaveworksdemos/user:0.4.4
     hostname: user
@@ -153,6 +193,9 @@ services:
     read_only: true
     environment:
       - MONGO_HOST=user-db:27017
+      - OTEL_SERVICE_NAME=user
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_TRACES_EXPORTER=otlp
   user-db:
     image: weaveworksdemos/user-db:0.4.0
     hostname: user-db
