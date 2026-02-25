@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^echo \"Finding biggest most recent volumes\\.\\.\\.\"\nfor v in \\$\\(docker volume ls -q \\| tail -20\\); do\n  created=\\$\\(docker volume inspect \"\\$v\" -f '\\{\\{\\.CreatedAt\\}\\}'\\)\n  size=\\$\\(docker run --rm -v \"\\$v\":/data alpine du -sh /data 2>/dev/null \\| awk '\\{print \\$1\\}'\\)\n  echo \"\\$size \\| \\$created \\| \\$v\"\ndone \\| sort -hr \\| head -5$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

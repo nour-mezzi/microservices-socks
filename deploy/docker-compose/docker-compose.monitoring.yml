@@ -51,6 +51,8 @@ services:
         environment:
           - GF_SECURITY_ADMIN_PASSWORD=foobar
           - GF_USERS_ALLOW_SIGN_UP=false
+        volumes:
+          - grafana-storage:/var/lib/grafana
         links:
           - prometheus:prometheus
           - loki:loki
@@ -87,3 +89,6 @@ services:
           - /var/lib/docker/containers:/var/lib/docker/containers:ro
           - /var/log:/var/log
         command: -config.file=/etc/promtail/config.yml
+
+volumes:
+    grafana-storage:
