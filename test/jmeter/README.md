@@ -392,32 +392,32 @@ jmeter -n -t test.jmx ...
 ## Best Practices
 
 ### 1. Test Design
-- ✅ Start with smoke test (5 users)
-- ✅ Gradually increase load
-- ✅ Use realistic think times
-- ✅ Test one change at a time
-- ✅ Run tests multiple times for consistency
+-  Start with smoke test (5 users)
+-  Gradually increase load
+-  Use realistic think times
+-  Test one change at a time
+-  Run tests multiple times for consistency
 
 ### 2. Test Execution
-- ✅ Use CLI mode for actual load testing
-- ✅ Monitor application during tests
-- ✅ Isolate test environment from production
-- ✅ Run long tests during off-hours
-- ✅ Save all test results with timestamps
+-  Use CLI mode for actual load testing
+-  Monitor application during tests
+-  Isolate test environment from production
+-  Run long tests during off-hours
+-  Save all test results with timestamps
 
 ### 3. Results Analysis
-- ✅ Compare with baseline results
-- ✅ Focus on percentiles (P95, P99) not just averages
-- ✅ Correlate JMeter results with monitoring data
-- ✅ Document findings and recommendations
-- ✅ Share results with team
+-  Compare with baseline results
+-  Focus on percentiles (P95, P99) not just averages
+-  Correlate JMeter results with monitoring data
+-  Document findings and recommendations
+-  Share results with team
 
 ### 4. Continuous Testing
-- ✅ Integrate into CI/CD pipeline
-- ✅ Run smoke tests on every deployment
-- ✅ Schedule weekly load tests
-- ✅ Track performance trends over time
-- ✅ Set up alerts for performance regression
+-  Integrate into CI/CD pipeline
+-  Run smoke tests on every deployment
+-  Schedule weekly load tests
+-  Track performance trends over time
+-  Set up alerts for performance regression
 
 ---
 
