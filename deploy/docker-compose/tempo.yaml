@@ -1,5 +1,10 @@
 server:
   http_listen_port: 3200
+  grpc_listen_port: 3201
+  log_level: warn
+
+multitenancy_enabled: false
+auth_enabled: false
 
 distributor:
   receivers:
@@ -12,13 +17,9 @@ distributor:
     zipkin:
       endpoint: 0.0.0.0:9411
 
-storage:
-  trace:
-    backend: local
-    local:
-      path: /tmp/tempo/blocks
-    wal:
-      path: /tmp/tempo/wal
+ingester:
+  trace_idle_period: 10s
+  max_block_duration: 5m
 
 metrics_generator:
   registry:
@@ -38,6 +39,20 @@ metrics_generator:
     span_metrics:
       dimensions:
         - service.namespace
+
+storage:
+  trace:
+    backend: local
+    local:
+      path: /tmp/tempo/blocks
+    wal:
+      path: /tmp/tempo/wal
+
+querier:
+  {}
+
+query_frontend:
+  {}
 
 overrides:
   defaults:
