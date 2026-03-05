@@ -1,0 +1,7 @@
+issue_id,name,description,affected_endpoint,severity,root_cause,symptom,introduced_at
+1,Homepage Performance Degradation,Frontend homepage responses slow from ~150ms to ~3500ms,/,HIGH,Database connection pool exhausted; high memory paging,Increased response latency; timeouts; page load failures,2026-03-02T10:00:00
+2,Aggressive Timeout Configuration,Connection timeout reduced from 10s to 2s causing failures,"/catalogue, /tags, /catalogue/size",HIGH,Test configuration changed: connect_timeout=2000ms,Connection timeout errors; failed assertions; elevated error rate,2026-03-02T10:05:00
+3,Data Validation Mismatch,Catalogue endpoint returning different JSON structure than expected,/catalogue,MEDIUM,API response schema changed or test expects non-existent array index $[999],JSONPath assertion failures; data validation errors,2026-03-02T10:10:00
+4,Cascading Service Failures,Product details request fails due to upstream service dependency,/catalogue/{id},CRITICAL,Upstream microservice unavailable; circuit breaker triggered,500 errors; cascading timeout failures; increased latency,2026-03-02T10:15:00
+5,Service Unavailability,Tags endpoint returns 503 Service Unavailable,/tags,HIGH,Tags service database connection pool exhausted,503 errors; test failures; user-facing service degradation,2026-03-02T10:20:00
+6,Memory Spike and High Load,Concurrent users increased from 10 to 50; causing memory pressure,All endpoints,CRITICAL,Test configuration increased USERS from 10 to 50,High memory usage; GC pauses; increased latency across all endpoints,2026-03-02T10:25:00

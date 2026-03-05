@@ -1,0 +1,19 @@
+timestamp,endpoint,response_time_ms,status_code,success,anomaly_id,error_message,thread_name,attempt
+2026-03-02T10:00:01.123456,/,3245,200,1,1,,Thread-12,1
+2026-03-02T10:00:03.456789,/,4012,504,0,1,Gateway Timeout,Thread-45,1
+2026-03-02T10:00:05.789012,/,2876,200,1,1,,Thread-23,2
+2026-03-02T10:00:06.234567,/catalogue,2000,000,0,2,Connection timeout,Thread-8,1
+2026-03-02T10:00:07.567890,/catalogue/03fef6ac-1896-4ce8-bd69-b798f85c6e0b,8234,500,0,4,Service Unavailable - upstream dependency failed,Thread-31,1
+2026-03-02T10:00:08.890123,/catalogue,234,200,0,3,JSONPath: $[999] not found - expected at least 1000 items,Thread-15,1
+2026-03-02T10:00:09.123456,/tags,456,503,0,5,Service Unavailable,Thread-47,1
+2026-03-02T10:00:10.456789,/,1234,200,0,6,Request timeout,Thread-2,1
+2026-03-02T10:00:11.789012,/catalogue,2000,000,0,2,Connection timeout,Thread-19,1
+2026-03-02T10:00:12.234567,/,3567,200,1,1,,Thread-34,2
+2026-03-02T10:00:13.567890,/catalogue/size,2000,000,0,2,Connection timeout,Thread-5,1
+2026-03-02T10:00:14.890123,/tags,503,503,0,5,Service Unavailable,Thread-42,1
+2026-03-02T10:00:15.123456,/catalogue,189,200,0,3,JSONPath: $[999] not found - expected at least 1000 items,Thread-28,1
+2026-03-02T10:00:16.456789,/,1456,200,0,6,Request timeout,Thread-11,1
+2026-03-02T10:00:17.789012,/catalogue/03fef6ac-1896-4ce8-bd69-b798f85c6e0b,7845,500,0,4,Service Unavailable - upstream dependency failed,Thread-39,1
+2026-03-02T10:00:18.234567,/,4123,504,0,1,Gateway Timeout,Thread-22,2
+2026-03-02T10:00:19.567890,/catalogue,2000,000,0,2,Connection timeout,Thread-7,1
+2026-03-02T10:00:20.890123,/tags,512,503,0,5,Service Unavailable,Thread-50,1
