@@ -29,6 +29,17 @@ services:
         restart: unless-stopped
         ports:
           - 9100:9100
+    cadvisor:
+        image: gcr.io/cadvisor/cadvisor:latest
+        container_name: cadvisor
+        volumes:
+          - /:/rootfs:ro
+          - /var/run:/var/run:ro
+          - /sys:/sys:ro
+          - /var/lib/docker/:/var/lib/docker:ro
+        ports:
+          - 8080:8080
+        restart: unless-stopped
     alertmanager:
         image: prom/alertmanager
         ports:
@@ -82,10 +93,12 @@ services:
           - 3100:3100
         command: -config.file=/etc/loki/local-config.yaml
     promtail:
-        image: grafana/promtail:2.9.0
+        image: grafana/promtail:3.0.0
         volumes:
           - /var/lib/docker/containers:/var/lib/docker/containers:ro
           - /var/log:/var/log
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+          - ./promtail-config.yml:/etc/promtail/config.yml:ro
         command: -config.file=/etc/promtail/config.yml
 
 volumes:

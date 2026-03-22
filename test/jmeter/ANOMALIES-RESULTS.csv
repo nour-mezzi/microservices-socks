@@ -1,0 +1,64 @@
+anomaly_id,anomaly_name,test_date,start_time,end_time,duration_minutes,affected_services,jmeter_users,jmeter_rampup_seconds,root_metric,latency_p50_baseline_ms,latency_p50_peak_ms,latency_p95_baseline_ms,latency_p95_peak_ms,latency_p99_baseline_ms,latency_p99_peak_ms,error_rate_baseline_percent,error_rate_peak_percent,success_rate_percent,resource_type,resource_limit,resource_peak_usage,resource_peak_percent,key_finding,prometheus_query,loki_query,tempo_trace_ids,reproduction_steps,notes
+ANOMALY-001,Memory Pressure (OOM),TBD,TBD,TBD,10,catalogue,100,60,container_memory_usage_bytes > limit*0.85,25,150,50,500,100,1200,0.1,5.2,94.8,memory,256M,245M,95%,"OutOfMemoryError triggered after 10min of sustained load. GC pause increased from 50ms to 500ms. One restart observed.","container_memory_usage_bytes{pod=~""catalogue.*""} / container_spec_memory_limit_bytes > 0.8","{job=""pod"", pod=~""catalogue.*""} | grep OutOfMemoryError","trace-001-restart, trace-002-gc-pause","1. Set memory limit to 256M: docker update --memory 256m sock-shop-catalogue
+2. Run: jmeter -n -t sock-shop-basic-loadtest.jmx -Jusers=100 -Jrampup=60 -Jduration=600
+3. Monitor: kubectl logs -f deployment/catalogue
+4. Query Prometheus for memory metrics","Memory fragmentation visible in GC logs. Service recovered after OOM kill."
+ANOMALY-002,CPU Saturation,TBD,TBD,TBD,10,payment,150,120,container_cpu_usage_seconds_total > 0.9*limit,30,800,100,2500,200,5000,0.2,15.8,84.2,cpu,0.25,0.24,96%,"CPU throttling detected. Latency spike of 8x at P99. Payment requests timing out.","rate(container_cpu_usage_seconds_total{pod=~""payment.*""}) > 0.8","{ job=""pod"", pod=~""payment.*""} | grep timeout","trace-003-payment-slow, trace-004-cascading-timeout","1. Set CPU limit: docker update --cpus=0.25 sock-shop-payment
+2. Increase JMeter load: jmeter -Jusers=150 -Jrampup=120 -Jduration=600
+3. Monitor metrics
+4. Observe error rate increase","Signature: High CPU% + Rising latency + Constant throughput drop"
+ANOMALY-003,Disk I/O Pressure,TBD,TBD,TBD,10,mongodb,100,60,node_disk_io_time_weighted_ms > 5000,40,250,80,1500,150,3000,0.3,8.5,91.5,disk_io,100%,87%,87%,"Database queries slow due to I/O wait. Latency increased 3x. I/O weighted time >5000ms.","node_disk_io_time_weighted_ms{device=~""sd.*""}","{ job=""mongodb""} | grep -i ""I/O error|seek""","trace-005-db-slow","1. Start fio stress: fio --name=rand-read --ioengine=libaio --iodepth=16 --rw=randread --bs=4k /path/to/mongo/data
+2. Run load test
+3. Query node metrics for I/O","Database layer most affected. I/O wait explains latency pattern."
+ANOMALY-004,DB Connection Pool Exhaustion,TBD,TBD,TBD,10,api,200,90,mongodb_connections_current > 0.9*max,35,1200,90,5000,200,8000,0.5,22.3,77.7,connection_pool,100,92,92%,"Connection queue depth reached 50. API requests queued. P99 latency >8s.","mongodb_connections_current / mongodb_connections_available > 0.8","{job=""api""} | grep ConnectionException | grep getConnection","trace-006-pool-exhausted, trace-007-queued-request","1. Reduce pool size in MongoDB config: maxPoolSize=10
+2. Run high concurrency: jmeter -Jusers=200 -Jrampup=90
+3. Monitor connection metrics
+4. Observe request queuing","Cascading impact: API → Database exhaustion → Frontend timeout"
+ANOMALY-005,Cascading Failure (Already in JMeter),TBD,TBD,TBD,5,catalogue|user|product,100,60,http_requests_total{status=~""5..""}> 0.05,20,50,60,2000,150,5500,0.1,18.5,81.5,latency,N/A,N/A,N/A,"Multiple services failing within 2-second window. Errors propagated from product-details → cart → checkout.","rate(http_requests_total{status=~""5..""}) by service > 0.05","{job=""api""} | grep ""upstream unavailable""","trace-008-cascade-start, trace-009-cascade-end","1. JMeter file already contains 8s delay (ISSUE #4)
+2. Run test
+3. Observe error spike
+4. Correlate with timestamps","Clear cascade pattern: start time is highly correlated across services."
+ANOMALY-006,Partial Degradation (Catalogue Slow),TBD,TBD,TBD,10,catalogue,100,60,histogram_quantile(0.95) > 3x baseline,30,120,80,500,150,800,0.1,1.2,98.8,cpu,N/A,N/A,N/A,"Catalogue endpoint degraded 5x. Success rate maintained at 98%. Downstream services impacted.","histogram_quantile(0.95, http_request_duration_seconds_bucket{service=""catalogue""})","{job=""catalogue""} | json request_duration_ms | stats avg by endpoint","trace-010-single-slow-service","1. Restart catalogue with artificial 200ms delay: export RESPONSE_DELAY=200
+2. Run normal load: jmeter -Jusers=100 -Jrampup=60
+3. Monitor latency metrics
+4. Check success rate stays high","Pattern: High latency but low error rate distinguishes from outage."
+ANOMALY-007,Network Latency Spikes,TBD,TBD,TBD,10,all,100,60,histogram_quantile(0.95, external_request_duration) > 0.5s,20,300,50,800,100,1200,0.1,3.5,96.5,network,N/A,N/A,N/A,"Network delay of 500ms added. All inter-service calls affected uniformly. No errors, just latency.","rate(network_transmit_bytes_total)","{job=""api""} | grep -i ""timeout|deadline""","trace-011-network-slow","1. Add network delay: tc qdisc add dev eth0 root netem delay 500ms
+2. Run load test
+3. Monitor external call latencies
+4. Compare with baseline
+5. Cleanup: tc qdisc del dev eth0 root","Uniform latency increase across all services = network cause."
+ANOMALY-008,Packet Loss (5%),TBD,TBD,TBD,10,all,100,60,rate(http_request_errors_total{reason=~""connection_dropped|RST""}),15,250,40,1500,80,3000,0.2,12.8,87.2,network_reliability,N/A,N/A,N/A,"5% packet loss triggered retries. Error rate jumped 60x. Latency highly variable.","rate(tcp_connection_resets_total) > 0","{job=""api""} | grep -i ""RST|connection reset|dropped""","trace-012-retry-1, trace-013-retry-2, trace-014-retry-success","1. Induce packet loss: tc qdisc add dev eth0 root netem loss 5%
+2. Run load: jmeter -Jusers=100 -Jduration=600
+3. Monitor connection resets
+4. Check retry behavior
+5. Cleanup: tc qdisc del dev eth0 root","Retries visible in traces as multiple child spans."
+ANOMALY-009,Stale Cache Data,TBD,TBD,TBD,10,catalogue,100,60,cache_hit_ratio < 0.7,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,98%,cache,N/A,N/A,N/A,"Cache invalidation disabled. Hit rate dropped to 65%. Stale data returned 100ms slower than fresh.","cache_hits_total / (cache_hits_total + cache_misses_total) < 0.7","{job=""catalogue""} | grep -i ""cache mismatch|stale data""","trace-015-cache-expired","1. Disable cache invalidation in code
+2. Update product data directly in MongoDB
+3. Run load test against front-end
+4. Observe cache hit ratio drop
+5. Query front-end seeing old prices","Signature: High latency on cold-cache first request + low hit rate."
+ANOMALY-010,Database Corruption (Simulated),TBD,TBD,TBD,5,orders|user,50,45,rate(db_transaction_rollbacks_total) > 0,N/A,N/A,N/A,N/A,N/A,N/A,0.1,8.5,91.5,database,N/A,N/A,N/A,"Transaction rollbacks at ~100/sec. OrderID orphaned from User. Constraint violations logged.","rate(db_transaction_rollbacks_total) > 0","{job=""mongodb""} | grep -i ""validation failed|constraint violation""","trace-016-failed-transaction","1. Inject MongoDB write failure mid-transaction
+2. Create an order with orphaned UserID
+3. Monitor for constraint violations
+4. Query: (missing orphan details)
+5. Verify system detects data integrity issue","Signature: Transaction count ≠ expected, orphaned records in DB."
+ANOMALY-011,External API Timeout (Payment Gateway),TBD,TBD,TBD,10,payment,50,45,histogram_quantile(0.95, external_payment_latency) > 30s,50,30000,100,31000,150,31500,0.1,45.2,54.8,external_dep,N/A,N/A,N/A,"Payment gateway responded after 30s timeout. Retries attempted. 45% of transactions failed.","rate(external_api_timeouts_total) > 0","{job=""payment""} | grep -i ""gateway timeout|retry attempt""","trace-017-external-timeout","1. Mock payment API to delay 30s: sleep 30 in payment service
+2. Run checkout flow: jmeter -Jusers=50 -Jduration=600
+3. Monitor external API latency
+4. Check retry counter
+5. Observe fallback usage","External dependency timeouts are high-latency anomalies, not connection failures."
+ANOMALY-012,Memory Leak (Long-Running Test),TBD,TBD,TBD,120,catalogue,80,60,deriv(container_memory_usage_bytes) > 0,25,450,50,1800,100,3500,0.1,12.5,87.5,memory,512M,480M,93%,"Memory usage linearly increased over 2 hours. GC frequency rose from 1/sec to 5/sec. Eventually hit limit.","deriv(container_memory_usage_bytes{pod=~""catalogue.*""}) > 0","{job=""pod"", pod=~""catalogue.*""} | grep -i ""unable to allocate|memory pressure""","trace-series-18-to-150 (timestamps 1min apart)","1. Run sustained load for 2 hours: jmeter -Jusers=80 -Jduration=7200
+2. Capture memory metrics every 1min
+3. Plot memory over time (should be ~flat for healthy service)
+4. Observe linear growth = leak
+5. Monitor GC frequency increase","Signature: Positive derivative of memory usage + increasing GC frequency."
+ANOMALY-013,Thread Leak / Thread Pool Exhaustion,TBD,TBD,TBD,15,catalogue,150,120,jvm_threads_live > 0.9 * jvm_threads_max,20,1950,40,2000,50,2000,0.2,35.2,64.8,thread_pool,2000,1900,95%,"Thread count climbed to 1900/2000 (95%). New requests rejected. RejectedExecutionException logged.","(jvm_threads_live / jvm_threads_max) > 0.9","{job=""pod"", pod=~""catalogue.*""} | grep RejectedExecutionException","trace-019-rejected-request","1. Modify code to not close threads properly
+2. Run high concurrency: jmeter -Jusers=150 -Jrampup=120
+3. Monitor jvm_threads_live
+4. Observe approaching max_threads
+5. See RejectedExecutionException in logs","Leaking service threads per request at ~15 threads/sec under load."
+ANOMALY-014,Deadlock / Lock Contention,TBD,TBD,TBD,10,orders,100,60,app_lock_wait_time_seconds_total > 100,30,2000,100,5000,200,7000,0.1,42.5,57.5,locks,N/A,N/A,N/A,"Lock contention detected. Wait times exceeded 100ms. Some threads waited >5 seconds. Asymmetric latency observed.","rate(app_lock_wait_time_seconds_total) > 0.1","{job=""pod""} | grep -i ""deadlock|lock timeout|waited for lock""","trace-020-blocked-fast, trace-021-blocked-slow","1. Introduce circular lock dependency in orders service
+2. Run concurrent checkpoint+order-update: jmeter -Jusers=100
+3. Monitor lock wait time
+4. Observe some requests fast, others slow (asymmetric)
+5. Check for deadlock messages in logs","Signature: Asymmetric latency (some 50ms, others 5s) + lock-related errors."

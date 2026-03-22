@@ -1,0 +1,10 @@
+timestamp,data_type,service,metric_name,metric_value,unit,log_level,log_message,notes
+2026-03-05T21:06:59Z,jmeter,api,test_results,5111,count,info,"JMeter test completed with 5111 result lines",Includes header
+2026-03-05T21:06:59Z,jmeter_results,api,success_count,665,count,info,"Successful JMeter requests",Requests with success=true
+2026-03-05T21:06:59Z,jmeter_results,api,failure_count,917,count,warning,"Failed JMeter requests",Requests with success=false
+2026-03-05T21:06:59Z,summary,system,anomaly_id,ANOMALY-001,string,info,"Anomaly being tested",
+2026-03-05T21:06:59Z,summary,system,total_duration,304,seconds,info,"Total test execution time",
+2026-03-05T21:06:59Z,summary,system,jmeter_users,100,count,info,"Concurrent JMeter users",
+2026-03-05T21:06:59Z,summary,system,rampup_time,60,seconds,info,"User ramp-up period",
+2026-03-05T21:06:59Z,summary,system,test_start,1772744819,epoch,info,"Test start timestamp",Unix epoch seconds
+2026-03-05T21:06:59Z,summary,system,test_end,1772745123,epoch,info,"Test end timestamp",Unix epoch seconds

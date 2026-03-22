@@ -1,7 +1,8 @@
-# Alert for high error rate in the Sock Shop.
+# Sock Shop Observability Alerts
 groups:
 - name: Sock Shop
   rules:
+  # ERROR RATE ALERTS
   - alert: HighErrorRate
     expr: rate(request_duration_seconds_count{status_code="500"}[1m]) > .1
     for: 1m
@@ -10,3 +11,90 @@ groups:
     annotations:
       summary: "High HTTP 500 error rates"
       description: "Rate of HTTP 500 errors per 1 minutes: {{ $value }}"
+  
+  - alert: HighErrorRateOnEndpoint
+    expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High error rate on {{ $labels.endpoint }} ({{ $labels.service }})"
+      description: "Error rate: {{ $value | humanizePercentage }}"
+  
+  # LATENCY ALERTS
+  - alert: HighRequestLatency
+    expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1.0
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High request latency detected"
+      description: "P95 latency: {{ $value }}s on {{ $labels.service }}"
+  
+  - alert: P99LatencyHigh
+    expr: histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m])) > 2.0
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "P99 latency critically high"
+      description: "P99 latency: {{ $value }}s on {{ $labels.service }}"
+  
+  # CONTAINER RESTART ALERTS
+  - alert: ContainerRestarts
+    expr: increase(container_last_seen{id!=""}[15m]) > 0
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Container {{ $labels.name }} restarted"
+      description: "Container {{ $labels.name }} has restarted {{ $value }} times in 15 minutes"
+  
+  # RESOURCE USAGE ALERTS
+  - alert: HighCPUUsage
+    expr: rate(container_cpu_usage_seconds_total{}[5m]) * 100 > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage"
+      description: "Container {{ $labels.name }} CPU usage: {{ $value | humanize }}%"
+  
+  - alert: HighMemoryUsage
+    expr: container_memory_working_set_bytes / container_spec_memory_limit_bytes * 100 > 85
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High memory usage"
+      description: "Container {{ $labels.name }} memory usage: {{ $value | humanize }}%"
+  
+  # SERVICE AVAILABILITY ALERTS
+  - alert: ServiceDown
+    expr: up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Service {{ $labels.job }} is down"
+      description: "Service {{ $labels.job }} on {{ $labels.instance }} is not responding"
+  
+  # TIMEOUT/EXCEPTION ALERTS
+  - alert: HighTimeoutRate
+    expr: rate(timeout_exceptions_total[5m]) > 0.01
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High timeout rate detected"
+      description: "Service {{ $labels.service }} has {{ $value | humanize }} timeouts per second"
+  
+  # TRACE-BASED ALERTS
+  - alert: HighTraceErrorRate
+    expr: rate(traces_spanmetrics_duration_bucket{status_code="error"}[5m]) > 0.05
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High trace error rate"
+      description: "Service {{ $labels.service_name }} error rate: {{ $value | humanizePercentage }}"
