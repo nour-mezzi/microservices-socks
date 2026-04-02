@@ -33,6 +33,14 @@ JMETER_SCRIPT="${SCRIPT_DIR}/sock-shop-basic-loadtest.jmx"
 MONITORING_ENABLED=${MONITORING_ENABLED:-true}
 CAPTURE_TRACES=${CAPTURE_TRACES:-true}
 CAPTURE_LOGS=${CAPTURE_LOGS:-true}
+EXPAND_BEFORE_SECONDS=${EXPAND_BEFORE_SECONDS:-900}
+EXPAND_AFTER_SECONDS=${EXPAND_AFTER_SECONDS:-900}
+PROMETHEUS_URL=${PROMETHEUS_URL:-http://localhost:9090}
+LOKI_URL=${LOKI_URL:-http://localhost:3100}
+TEMPO_URL=${TEMPO_URL:-http://localhost:3200}
+PROM_QUERY_STEP_SECONDS=${PROM_QUERY_STEP_SECONDS:-15}
+DOCKER_LOG_SERVICES=${DOCKER_LOG_SERVICES:-"front-end edge-router catalogue catalogue-db carts carts-db orders orders-db shipping queue-master rabbitmq payment user user-db"}
+RUN_ID=$(date -u +%Y%m%dT%H%M%SZ)
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -75,6 +83,140 @@ log_error() {
   echo -e "${RED}[✗]${NC} $*" | tee -a "$ANOMALY_LOG"
 }
 
+to_rfc3339() {
+  date -u -d "@$1" +%Y-%m-%dT%H:%M:%SZ
+}
+
+collect_observability_data() {
+  local test_start_epoch="$1"
+  local test_end_epoch="$2"
+  local results_file="$3"
+
+  local jmeter_start_epoch="$test_start_epoch"
+  local jmeter_end_epoch="$test_end_epoch"
+  local jmeter_start_ms
+  local jmeter_end_ms
+
+  if [[ -f "$results_file" ]]; then
+    jmeter_start_ms=$(awk -F',' 'NR > 1 && $1 ~ /^[0-9]+$/ { if (min == "" || $1 < min) min = $1 } END { print min }' "$results_file")
+    jmeter_end_ms=$(awk -F',' 'NR > 1 && $1 ~ /^[0-9]+$/ { if (max == "" || $1 > max) max = $1 } END { print max }' "$results_file")
+
+    if [[ -n "${jmeter_start_ms:-}" && -n "${jmeter_end_ms:-}" ]]; then
+      jmeter_start_epoch=$((jmeter_start_ms / 1000))
+      jmeter_end_epoch=$((jmeter_end_ms / 1000))
+      log_info "Using timestamps from JMeter results for export window"
+    else
+      log_warning "Could not parse JMeter timestamps, using runtime window"
+    fi
+  fi
+
+  local window_start=$((jmeter_start_epoch - EXPAND_BEFORE_SECONDS))
+  local window_end=$((jmeter_end_epoch + EXPAND_AFTER_SECONDS))
+  if (( window_start < 0 )); then
+    window_start=0
+  fi
+
+  local window_start_iso
+  local window_end_iso
+  window_start_iso=$(to_rfc3339 "$window_start")
+  window_end_iso=$(to_rfc3339 "$window_end")
+
+  local export_root="${RESULTS_DIR}/${ANOMALY_ID}-${RUN_ID}-observability"
+  local metrics_dir="${export_root}/metrics"
+  local logs_dir="${export_root}/logs"
+  local traces_dir="${export_root}/traces"
+  mkdir -p "$metrics_dir" "$logs_dir" "$traces_dir"
+
+  cat > "${export_root}/export-metadata.json" << EOF
+{
+  "anomaly_id": "${ANOMALY_ID}",
+  "run_id": "${RUN_ID}",
+  "jmeter_results_file": "${results_file}",
+  "jmeter_test_start_epoch": ${jmeter_start_epoch},
+  "jmeter_test_end_epoch": ${jmeter_end_epoch},
+  "expanded_window_start_epoch": ${window_start},
+  "expanded_window_end_epoch": ${window_end},
+  "expanded_window_start": "${window_start_iso}",
+  "expanded_window_end": "${window_end_iso}",
+  "expand_before_seconds": ${EXPAND_BEFORE_SECONDS},
+  "expand_after_seconds": ${EXPAND_AFTER_SECONDS},
+  "prometheus_url": "${PROMETHEUS_URL}",
+  "loki_url": "${LOKI_URL}",
+  "tempo_url": "${TEMPO_URL}"
+}
+EOF
+
+  if [[ "$MONITORING_ENABLED" == "true" ]]; then
+    log_info "Exporting Prometheus metrics for expanded window ${window_start_iso} -> ${window_end_iso}"
+    local prom_queries=(
+      'sum(rate(http_requests_total[1m])) by (service,status)'
+      'histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le,service))'
+      'sum(container_memory_usage_bytes) by (container_label_com_docker_compose_service)'
+      'sum(rate(container_cpu_usage_seconds_total[1m])) by (container_label_com_docker_compose_service)'
+      'up'
+    )
+
+    local i=1
+    local query
+    for query in "${prom_queries[@]}"; do
+      local safe_name
+      safe_name=$(echo "$query" | tr '[:space:]' '_' | sed 's#[^a-zA-Z0-9_-]#_#g' | cut -c1-80)
+      curl -sS --get "${PROMETHEUS_URL}/api/v1/query_range" \
+        --data-urlencode "query=${query}" \
+        --data-urlencode "start=${window_start}" \
+        --data-urlencode "end=${window_end}" \
+        --data-urlencode "step=${PROM_QUERY_STEP_SECONDS}s" \
+        -o "${metrics_dir}/${i}-${safe_name}.json" || log_warning "Prometheus export failed for query: ${query}"
+      i=$((i + 1))
+    done
+    log_success "Prometheus exports saved to ${metrics_dir}"
+  fi
+
+  if [[ "$CAPTURE_LOGS" == "true" ]]; then
+    log_info "Exporting Docker service logs for expanded window"
+    local service
+    for service in ${DOCKER_LOG_SERVICES}; do
+      local container_id
+      container_id=$(docker ps --filter "label=com.docker.compose.service=${service}" -q | head -1)
+      if [[ -n "$container_id" ]]; then
+        docker logs --since "$window_start_iso" --until "$window_end_iso" "$container_id" > "${logs_dir}/${service}.log" 2>&1 || true
+      fi
+    done
+
+    local loki_start_ns=$((window_start * 1000000000))
+    local loki_end_ns=$((window_end * 1000000000))
+    curl -sS --get "${LOKI_URL}/loki/api/v1/query_range" \
+      --data-urlencode 'query={container=~".+"}' \
+      --data-urlencode "start=${loki_start_ns}" \
+      --data-urlencode "end=${loki_end_ns}" \
+      --data-urlencode "limit=5000" \
+      -o "${logs_dir}/loki-query-range.json" || log_warning "Loki export failed"
+
+    log_success "Logs exported to ${logs_dir}"
+  fi
+
+  if [[ "$CAPTURE_TRACES" == "true" ]]; then
+    log_info "Exporting Tempo traces for expanded window"
+    curl -sS --get "${TEMPO_URL}/api/search" \
+      --data-urlencode "start=${window_start}" \
+      --data-urlencode "end=${window_end}" \
+      --data-urlencode "limit=1000" \
+      -o "${traces_dir}/tempo-search-seconds.json" || log_warning "Tempo export failed (seconds query)"
+
+    local tempo_start_ns=$((window_start * 1000000000))
+    local tempo_end_ns=$((window_end * 1000000000))
+    curl -sS --get "${TEMPO_URL}/api/search" \
+      --data-urlencode "start=${tempo_start_ns}" \
+      --data-urlencode "end=${tempo_end_ns}" \
+      --data-urlencode "limit=1000" \
+      -o "${traces_dir}/tempo-search-nanoseconds.json" || log_warning "Tempo export failed (nanoseconds query)"
+
+    log_success "Trace export saved to ${traces_dir}"
+  fi
+
+  log_success "Observability export complete: ${export_root}"
+}
+
 # Print usage
 print_usage() {
   cat << EOF
@@ -97,11 +239,20 @@ Anomalies:
   ANOMALY-012    Memory Leak (Long-running test)
   ANOMALY-013    Thread Leak / Thread Pool Exhaustion
   ANOMALY-014    Deadlock / Lock Contention
+  ANOMALY-015    Resource Exhaustion (stress-ng noisy neighbor)
 
 Options:
   --duration N      Test duration in seconds (default: 600)
   --users N         Number of JMeter threads (default: 100)
   --rampup N        JMeter ramp-up time in seconds (default: 60)
+
+Environment Variables:
+  EXPAND_BEFORE_SECONDS   Seconds before test window to export (default: 900)
+  EXPAND_AFTER_SECONDS    Seconds after test window to export (default: 900)
+  PROMETHEUS_URL          Prometheus API base URL (default: http://localhost:9090)
+  LOKI_URL                Loki API base URL (default: http://localhost:3100)
+  TEMPO_URL               Tempo API base URL (default: http://localhost:3200)
+  PROM_QUERY_STEP_SECONDS Prometheus range query step in seconds (default: 15)
 
 Examples:
   ./run-anomaly.sh ANOMALY-001 --duration 600 --users 100
@@ -168,50 +319,7 @@ END_TIME=$(date -u +%s)
 ACTUAL_DURATION=$((END_TIME - START_TIME))
 
 log_success "JMeter test completed in ${ACTUAL_DURATION}s"
-
-# Capture monitoring data
-if [[ "$MONITORING_ENABLED" == "true" ]]; then
-  log_info "Capturing monitoring data from Prometheus..."
-  
-  PROM_QUERIES=(
-    'rate(http_requests_total[5m])'
-    'histogram_quantile(0.95, http_request_duration_seconds_bucket)'
-    'container_memory_usage_bytes'
-    'rate(container_cpu_usage_seconds_total[5m])'
-  )
-  
-  for query in "${PROM_QUERIES[@]}"; do
-    log_info "Query: $query"
-    # In production, would call Prometheus API and export data
-  done
-fi
-
-# Capture logs
-if [[ "$CAPTURE_LOGS" == "true" ]]; then
-  log_info "Capturing application logs..."
-  LOGS_DIR="${RESULTS_DIR}/${ANOMALY_ID}-logs"
-  mkdir -p "$LOGS_DIR"
-  
-  # Export logs from each pod
-  kubectl logs -l app=catalogue --all-containers=true > "${LOGS_DIR}/catalogue.log" 2>&1 || true
-  kubectl logs -l app=payment --all-containers=true > "${LOGS_DIR}/payment.log" 2>&1 || true
-  kubectl logs -l app=orders --all-containers=true > "${LOGS_DIR}/orders.log" 2>&1 || true
-  
-  log_success "Logs captured to $LOGS_DIR"
-fi
-
-# Capture traces
-if [[ "$CAPTURE_TRACES" == "true" ]]; then
-  log_info "Capturing traces from Tempo..."
-  TRACES_DIR="${RESULTS_DIR}/${ANOMALY_ID}-traces"
-  mkdir -p "$TRACES_DIR"
-  
-  # In production, would export traces from Tempo API
-  # Query Tempo for traces during test window
-  log_info "Trace export would query Tempo API for service traces during: $TEST_TIMESTAMP"
-  
-  log_success "Trace capture configured for $TRACES_DIR"
-fi
+collect_observability_data "$START_TIME" "$END_TIME" "$TEST_RESULT_FILE"
 
 # Cleanup anomaly conditions (if applicable)
 if [[ -n "${CLEANUP_ANOMALY:-}" ]]; then
@@ -232,14 +340,13 @@ Duration:           ${ACTUAL_DURATION}s (requested: ${DURATION}s)
 JMeter Users:       $USERS
 Ramp-up:            ${RAMPUP}s
 Results File:       $TEST_RESULT_FILE
-Logs Directory:     ${RESULTS_DIR}/${ANOMALY_ID}-logs/
-Traces Directory:   ${RESULTS_DIR}/${ANOMALY_ID}-traces/
+Observability Data: ${RESULTS_DIR}/${ANOMALY_ID}-${RUN_ID}-observability/
 
 Next Steps:
 1. Review JMeter test results:  cat $TEST_RESULT_FILE
-2. Check application logs:       ls -la ${RESULTS_DIR}/${ANOMALY_ID}-logs/
-3. Query Prometheus for metrics: See MONITORING-QUERIES.md
-4. Review Tempo traces:          Open Grafana UI
+2. Check exported logs:          ls -la ${RESULTS_DIR}/${ANOMALY_ID}-${RUN_ID}-observability/logs/
+3. Check exported metrics:       ls -la ${RESULTS_DIR}/${ANOMALY_ID}-${RUN_ID}-observability/metrics/
+4. Review exported traces:       ls -la ${RESULTS_DIR}/${ANOMALY_ID}-${RUN_ID}-observability/traces/
 5. Update ANOMALIES-RESULTS.csv: Add findings from this test
 
 ===============================================================================
