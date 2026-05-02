@@ -32,6 +32,9 @@ services:
     restart: always
     environment:
       - OTEL_SERVICE_NAME=edge-router
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=otlp
   catalogue:
     image: weaveworksdemos/catalogue:0.3.5
     hostname: catalogue
