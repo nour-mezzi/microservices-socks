@@ -22,9 +22,9 @@ scrape_configs:
         regex: '(.{12}).*'
         replacement: '${1}'
         target_label: 'container_id'
-      # Extract compose service name
+      # Extract compose service name as 'service' label
       - source_labels: ['__meta_docker_container_label_com_docker_compose_service']
-        target_label: 'compose_service'
+        target_label: 'service'
       # Keep the image name as well
       - source_labels: ['__meta_docker_container_image_name']
         target_label: 'image'

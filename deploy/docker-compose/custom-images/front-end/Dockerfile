@@ -23,6 +23,12 @@ USER root
 # A proper fix requires updating the base image's Node.js version
 COPY --from=otel-base /app/node_modules /usr/src/app/node_modules
 
+# Fix crash: JSON.parse(body) throws when body is undefined on catalogue request error
+COPY cart-index.js /usr/src/app/api/cart/index.js
+
+# Fix service ports: catalogue listens on 8081, user on 8084 (not default port 80)
+COPY endpoints.js /usr/src/app/api/endpoints.js
+
 USER node
 
 # The environment variables in docker-compose.yml will configure OTel

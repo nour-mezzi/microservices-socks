@@ -42,21 +42,22 @@ log_info "Capturing baseline memory metrics..."
 BASELINE_MEMORY=$(docker stats "$CONTAINER_ID" --format "{{.MemUsage}}" --no-stream)
 log_info "Baseline memory: $BASELINE_MEMORY"
 
-# Apply memory pressure
-log_info "Applying memory limit: $MEMORY_LIMIT"
-docker update --memory "$MEMORY_LIMIT" "$CONTAINER_ID" > /dev/null
+# Apply memory pressure (must update --memory-swap alongside --memory to avoid cgroup conflict)
+log_info "Applying memory limit: $MEMORY_LIMIT (swap: 512m)"
+docker update --memory "$MEMORY_LIMIT" --memory-swap 512m "$CONTAINER_ID" > /dev/null
 log_success "Memory limit updated to $MEMORY_LIMIT"
 
 # Define cleanup function
 CLEANUP_ANOMALY='
   log_info "Cleaning up memory pressure (ANOMALY-001)..."
-  docker update --memory 512m '"$CONTAINER_ID"' > /dev/null
-  log_info "Memory limit restored to 512m"
+  docker update --memory 0 --memory-swap 0 '"$CONTAINER_ID"' > /dev/null
+  log_info "Memory limit restored (unlimited)"
   sleep 5
   log_info "Service memory stats after cleanup: $(docker stats '"$CONTAINER_ID"' --format \"{{.MemUsage}}\" --no-stream)"
 '
 
-# Test-specific configuration
+# Test-specific configuration — realistic journey exercises catalogue so memory pressure manifests
+JMETER_SCRIPT="${SCRIPT_DIR}/sock-shop-realistic-user-journey.jmx"
 USERS=100
 RAMPUP=60
 DURATION=600

@@ -1,0 +1,1228 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1777492106321,25,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,4,4,http://localhost:8080/dashboard/,22,0,15
+1777492107179,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,5,5,http://localhost:8080/dashboard/,3,0,0
+1777492108328,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,7,7,http://localhost:8080/dashboard/,3,0,1
+1777492108336,3,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,7,7,http://localhost:8080/dashboard/,2,0,1
+1777492109752,2,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,8,8,http://localhost:8080/dashboard/,2,0,1
+1777492109961,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,9,9,http://localhost:8080/dashboard/,4,0,2
+1777492110055,23,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,9,9,http://localhost:8081/containers/,10,0,1
+1777492110055,10,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,9,9,http://localhost:8081/health,10,0,1
+1777492110067,11,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,9,9,http://localhost:8081/containers/,10,0,0
+1777492110465,4,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,9,9,http://localhost:8081/containers/,2,0,0
+1777492110465,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,9,9,http://localhost:8081/health,2,0,0
+1777492110467,2,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,9,9,http://localhost:8081/containers/,2,0,0
+1777492111272,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,11,11,http://localhost:8081/containers/,2,0,0
+1777492111272,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,11,11,http://localhost:8081/health,2,0,0
+1777492111275,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,11,11,http://localhost:8081/containers/,2,0,0
+1777492111306,7,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,11,11,http://localhost:8081/containers/,3,0,1
+1777492111306,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,11,11,http://localhost:8081/health,3,0,1
+1777492111310,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,11,11,http://localhost:8081/containers/,3,0,0
+1777492111536,4,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,11,11,http://localhost:8080/dashboard/,3,0,1
+1777492112148,3,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,12,12,http://localhost:8080/dashboard/,3,0,1
+1777492112167,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,12,12,http://localhost:8080/dashboard/,4,0,2
+1777492112538,7,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,12,12,http://localhost:8081/containers/,4,0,1
+1777492112538,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,12,12,http://localhost:8081/health,4,0,1
+1777492112542,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,12,12,http://localhost:8081/containers/,2,0,0
+1777492112713,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,12,12,http://localhost:8081/containers/,2,0,1
+1777492112713,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,12,12,http://localhost:8081/health,2,0,1
+1777492112716,2,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,12,12,http://localhost:8081/containers/,2,0,0
+1777492112973,3,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,13,13,http://localhost:8082/health,0,0,3
+1777492113377,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,13,13,http://localhost:8082/health,0,0,1
+1777492113454,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,13,13,http://localhost:8080/dashboard/,3,0,1
+1777492113753,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,14,14,http://localhost:8082/health,0,0,1
+1777492114440,4,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,15,15,http://localhost:8080/dashboard/,4,0,1
+1777492114482,9,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,15,15,http://localhost:8081/containers/,5,0,2
+1777492114482,5,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,15,15,http://localhost:8081/health,5,0,2
+1777492114487,4,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,15,15,http://localhost:8081/containers/,4,0,0
+1777492114573,5,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,15,15,http://localhost:8080/dashboard/,5,0,2
+1777492114757,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,15,15,http://localhost:8082/health,0,0,1
+1777492115317,8,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,16,16,http://localhost:8081/containers/,4,0,1
+1777492115317,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,16,16,http://localhost:8081/health,4,0,1
+1777492115322,3,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,16,16,http://localhost:8081/containers/,3,0,0
+1777492115471,4,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,16,16,http://localhost:8080/dashboard/,4,0,0
+1777492115595,4,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,16,16,http://localhost:8080/dashboard/,4,0,1
+1777492115687,4,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,16,16,http://localhost:8081/containers/,2,0,1
+1777492115687,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,16,16,http://localhost:8081/health,2,0,1
+1777492115689,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,16,16,http://localhost:8081/containers/,2,0,0
+1777492115703,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,16,16,http://localhost:8082/health,0,0,2
+1777492115930,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,17,17,http://localhost:8082/health,0,0,1
+1777492115938,7,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,17,17,http://localhost:8081/containers/,3,0,1
+1777492115938,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,17,17,http://localhost:8081/health,3,0,1
+1777492115941,4,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,17,17,http://localhost:8081/containers/,4,0,0
+1777492116366,2,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,17,17,http://localhost:8080/dashboard/,2,0,0
+1777492116859,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,18,18,http://localhost:8080/dashboard/,3,0,0
+1777492117033,2,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,18,18,http://localhost:8080/dashboard/,2,0,1
+1777492117301,6,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,19,19,http://localhost:8081/containers/,3,0,1
+1777492117301,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,19,19,http://localhost:8081/health,3,0,1
+1777492117305,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,19,19,http://localhost:8081/containers/,2,0,0
+1777492117363,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,19,19,http://localhost:8082/health,0,0,1
+1777492117460,4,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,19,19,http://localhost:8080/dashboard/,4,0,1
+1777492117623,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,19,19,http://localhost:8081/containers/,4,0,1
+1777492117623,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,19,19,http://localhost:8081/health,4,0,1
+1777492117627,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,19,19,http://localhost:8081/containers/,2,0,0
+1777492117691,4,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,19,19,http://localhost:8080/dashboard/,4,0,0
+1777492118083,5,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,1
+1777492118178,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492118572,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492118568,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492118568,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492118570,3,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492118593,2,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,1
+1777492118933,8,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492118933,5,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492118938,3,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492119122,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492119325,3,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492119406,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492119404,5,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492119689,8,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492119689,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492119694,3,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492119768,7,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492119768,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492119772,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492120071,7,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492120071,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492120075,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492120139,7,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,1
+1777492120139,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,4,0,1
+1777492120143,3,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492120295,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,1
+1777492120611,3,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492120621,7,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492120621,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492120625,3,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492120725,3,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492120748,7,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492120748,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492120751,4,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492120761,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492120899,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492120945,5,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492120945,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492120948,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492121275,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492121362,4,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492121586,5,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492122076,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492122332,7,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492122332,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492122336,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492122524,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492122534,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492122534,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492122538,1,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492122613,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492122733,7,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492122733,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492122737,3,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492122781,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492122900,5,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492122900,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492122903,2,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492123204,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492123243,8,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,2
+1777492123243,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,4,0,2
+1777492123248,3,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492123322,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492123575,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492123711,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492123710,4,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492123710,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492123713,1,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492123902,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492123905,8,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492123905,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492123910,3,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492123984,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492124056,5,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492124240,4,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492124240,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492124243,1,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492124525,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492124977,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492124977,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492124981,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492124982,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492125198,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492125442,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492125512,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492125613,3,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492125707,4,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492125894,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492126129,4,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492126435,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492126443,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492126474,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492126527,4,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492126668,8,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492126668,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492126673,3,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492126710,4,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492126747,6,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492126747,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492126751,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492126905,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492126914,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492127697,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492128086,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492128175,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492128175,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492128178,2,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492128216,5,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492128306,5,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492128417,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492128443,7,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492128443,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492128447,3,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492128495,7,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492128495,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492128500,2,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492128664,7,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492128664,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492128667,4,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492129008,6,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492129008,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492129012,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492129203,5,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492129203,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492129207,1,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492129253,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492129408,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492129469,4,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492129469,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492129471,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492129492,6,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492129492,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492129495,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492129579,2,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492129602,2,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492129653,4,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492129793,3,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492129793,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492129795,1,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492130376,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492130624,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492130791,5,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492130791,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492130794,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492131009,7,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492131009,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492131013,3,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492131020,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492131235,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492131247,2,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492131422,7,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492131422,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492131426,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492131748,4,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492131748,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492131751,1,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492131864,5,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492131864,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492131866,3,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492131873,4,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492132000,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492132035,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492132224,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492132338,7,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492132338,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492132342,3,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492132370,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492132500,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492132522,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492132936,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492133410,3,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492133414,5,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492133414,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492133416,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492133464,5,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492133464,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492133467,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492134029,6,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492134029,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492134033,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492134092,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492134175,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492134229,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492134454,2,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492134560,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492134613,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492134639,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492134639,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492134642,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492134997,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492135149,5,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492135152,5,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492135228,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492135262,5,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492135356,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492135502,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492135724,5,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492135762,7,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492135762,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492135766,3,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492135816,4,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492136095,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492136550,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492136886,4,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492137060,8,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492137060,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492137065,3,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492137124,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492137142,6,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492137142,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492137146,2,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492137273,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492137294,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492137333,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492137590,7,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492137590,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492137594,3,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492137748,6,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492137748,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492137752,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492137917,7,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492137917,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492137921,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492137950,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492138021,4,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492138113,3,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492138113,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492138115,1,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492138403,7,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492138403,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492138407,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492138455,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492138479,5,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492138583,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492138583,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492138586,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492138766,4,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492138766,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492138768,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492138825,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492139961,6,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492139961,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492139964,3,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492139968,4,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492140086,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492140086,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492140089,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492140145,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492140293,7,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492140293,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492140296,4,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492140672,6,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492140672,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492140675,3,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492140695,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492140709,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492140890,4,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492140987,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492141007,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492141043,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492141146,6,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492141146,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492141150,2,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492141413,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492141458,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492141526,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492141528,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492141528,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492141531,3,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492141612,5,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492141612,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492141615,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492141727,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492141799,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492142502,7,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492142502,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492142506,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492142757,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492142971,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492143152,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492143218,4,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492143474,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492143493,3,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492143676,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492143695,4,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492144129,3,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492144129,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492144131,1,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492144149,4,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492144149,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492144152,1,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492144325,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492144331,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492144448,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492144620,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492144664,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492144754,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492144766,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492145204,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492145204,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492145207,3,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492145350,4,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492145440,8,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492145440,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492145444,4,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,4,0,0
+1777492145879,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492146152,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492146402,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492146548,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492146548,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492146551,2,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492146567,5,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492146733,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492146769,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492146898,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492146898,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492146901,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492147239,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492147256,5,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492147256,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492147259,2,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492147347,6,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492147347,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492147351,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492147633,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492147840,4,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492148001,6,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492148001,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492148005,2,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492148003,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492148003,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492148006,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492148060,3,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492148164,6,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492148164,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492148167,3,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492148335,6,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492148335,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492148339,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492148376,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492148672,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492149323,2,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492149347,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492149347,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492149350,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492149355,2,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492149493,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492149795,4,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492149795,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492149798,1,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492150031,5,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492150031,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492150033,3,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492150056,4,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492150056,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492150059,1,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492150119,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492150285,6,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492150285,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492150289,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492150463,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492150604,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492150663,6,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492150663,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492150666,3,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492150824,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492150882,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492150902,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492151257,6,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492151257,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492151260,3,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492151294,5,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492151434,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492151477,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492151594,5,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492151594,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492151598,1,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492151646,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492152261,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492152326,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492152435,7,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492152435,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492152439,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492152451,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492152459,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492152675,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492152847,4,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492152982,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492153361,4,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492153402,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492153491,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492153587,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492153587,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492153590,3,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492153858,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492153858,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492153862,1,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492153927,4,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492153940,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492154110,3,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492154141,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492154426,2,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492154513,4,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492154513,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492154515,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492154834,3,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492154836,2,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492154912,4,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492155057,3,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492155180,7,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492155180,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492155184,3,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492155622,7,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492155622,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492155626,3,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492155651,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492155814,5,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492155814,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492155817,2,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492156129,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492156202,7,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492156202,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492156206,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492156571,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492156660,4,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492156660,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492156663,1,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492156721,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492156729,5,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492156729,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492156732,2,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492156880,3,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492157236,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492157466,4,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492157712,4,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492157712,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492157715,1,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492157741,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492157906,4,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492157952,2,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492157954,4,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492157954,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492157956,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492157983,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492158007,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492158007,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492158011,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492158329,6,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492158329,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492158333,2,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492158544,6,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492158544,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492158547,3,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492158626,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492158685,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492158685,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492158687,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492159203,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492159364,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492159389,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492160063,5,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492160063,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492160066,2,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492160224,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492160298,7,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492160298,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492160302,3,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492160300,6,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492160321,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492160383,6,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492160383,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492160387,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492160487,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492160805,5,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492160873,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492160936,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492161025,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492161183,4,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492161183,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492161186,1,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492161271,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492161603,6,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492161603,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492161607,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492161626,4,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492161797,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492161854,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492162345,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492162553,4,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492162572,4,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492162930,4,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492162957,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492163113,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492163261,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492163502,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492163502,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492163506,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492163506,4,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492163506,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492163509,1,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492163565,4,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492163574,6,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492163574,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492163577,3,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492163656,6,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492163656,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492163660,2,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492163772,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492164126,4,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492164126,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492164128,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492164575,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492164779,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492164837,2,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492164856,4,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492164931,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492165489,3,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492165567,4,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492165576,2,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492165683,5,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492165683,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492165687,1,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492165729,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492165729,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492165732,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492165923,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492165923,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492165926,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492166057,4,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492166057,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492166060,1,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492166350,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492166534,6,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492166534,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492166538,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492166535,6,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492166535,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492166538,3,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492166578,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492166619,4,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492166882,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492166900,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492167101,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492167264,6,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492167264,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492167267,3,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492167287,6,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492167287,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492167290,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492167564,5,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492167564,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492167567,2,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492167620,3,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492168114,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492168114,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492168117,3,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492168120,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492168120,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492168123,2,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492168128,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492168169,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492168309,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492168424,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492168570,6,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492168570,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492168574,2,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492168969,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492169450,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492169581,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492169623,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492169629,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492169735,5,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492169735,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492169738,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492169983,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492170011,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492170011,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492170058,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492170340,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492170596,7,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492170596,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492170600,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492170616,4,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492170955,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492171337,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492171361,6,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492171361,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492171365,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492171446,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492171525,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492171814,3,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492171874,3,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492171905,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,2
+1777492172010,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492172203,8,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492172203,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492172208,3,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492172219,6,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492172219,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492172222,3,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492172526,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492172526,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492172530,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492172658,3,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492172726,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492173058,3,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492173260,5,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492173260,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492173263,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492173495,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492173495,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492173498,2,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492173521,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492173581,2,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,1
+1777492173740,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492173845,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492174247,1,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,1,0,0
+1777492174330,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492174330,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492174333,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492174389,3,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492174413,4,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492174413,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492174415,2,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492174646,5,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492174646,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492174649,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492174967,2,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492174982,3,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492174982,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492174984,1,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492175007,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492175122,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492175211,3,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,1,0,1
+1777492175211,1,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,1,0,1
+1777492175213,1,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492175499,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492175799,6,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492175799,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492175803,2,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492175882,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492175991,2,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,1
+1777492176088,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492176089,5,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492176089,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492176092,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492176127,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492176127,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492176130,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492176551,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492176975,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,2
+1777492176975,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,2
+1777492176978,3,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492176982,3,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,1,0,0
+1777492176982,1,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,1,0,0
+1777492176983,2,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492176984,6,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492176984,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492176987,3,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492177074,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492177376,4,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492177461,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492177495,4,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,1
+1777492177699,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492177763,3,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492177831,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492177967,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,2
+1777492178213,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492178327,5,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,2
+1777492178327,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,3,0,2
+1777492178331,1,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492178768,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492178776,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492178832,6,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492178832,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492178835,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492179271,3,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492179314,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492179447,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492179558,4,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492179558,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492179561,1,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492179743,3,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492179897,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492179981,5,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492179981,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492179984,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492180123,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492180308,3,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492180493,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492180650,6,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492180650,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492180653,3,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492180782,5,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492180782,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492180785,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492181059,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492181111,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492181111,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492181114,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492181323,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492181342,3,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492181453,3,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492181619,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492181767,5,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492181767,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492181770,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492181774,3,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492181962,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492182359,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492182440,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492182440,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492182442,3,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492182823,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492183111,4,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492183111,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492183113,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492183131,3,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492183131,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492183133,1,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492183142,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492183151,5,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492183261,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492183289,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492183518,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492183844,6,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492183844,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492183847,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492183903,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492184030,3,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492184030,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492184032,1,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492184223,3,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492184223,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492184225,1,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492184542,3,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492184556,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492184556,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492184560,1,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492184563,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492184661,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492184661,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492184664,3,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492184925,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492185085,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492185322,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492185397,4,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492185495,5,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492185495,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492185498,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492185535,3,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492185535,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492185537,1,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492185986,6,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492185986,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492185990,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492186038,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492186145,7,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492186145,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492186149,3,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492186191,3,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492186443,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492186613,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492186695,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492186702,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492187108,3,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,1
+1777492187334,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492187444,6,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492187444,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492187447,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492187475,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492187590,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492187597,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492187796,6,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492187796,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492187800,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492188411,6,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492188411,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492188414,3,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492188426,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492188442,3,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492188807,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492188861,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492188894,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492188913,3,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492189398,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492189556,4,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,1
+1777492189556,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,1
+1777492189559,1,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492189635,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492189660,3,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492189685,4,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492189685,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492189687,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492189787,4,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,1
+1777492189787,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,2,0,1
+1777492189790,1,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492189816,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492189856,4,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492190025,2,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492190206,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492190206,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492190209,2,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492190540,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492190585,6,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492190585,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492190589,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492190987,4,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492190987,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492190990,1,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492191262,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492191279,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492191529,3,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492191568,4,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492191568,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492191571,1,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492192078,3,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492192122,3,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492192142,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492192294,2,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492192329,4,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492192329,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492192331,2,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492192528,3,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492192806,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492192848,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492193106,5,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492193106,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492193109,2,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492193234,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492193242,4,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492193242,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492193244,2,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492193279,5,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492193279,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492193282,2,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492193317,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492193383,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492193383,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492193386,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492193595,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492194017,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492194032,5,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492194032,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492194035,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492194320,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492194442,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492194582,2,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492194634,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492194634,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492194637,2,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492194852,5,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492194855,6,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492194855,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492194859,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492195285,5,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492195285,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492195289,1,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492195443,5,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,5,0,0
+1777492195474,6,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492195474,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492195477,3,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492195655,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492195867,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492195896,4,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492195896,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492195899,1,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492195934,2,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492196036,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492196171,3,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492196189,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492196664,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492196765,2,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492196824,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492197246,5,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492197246,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492197249,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492197523,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492197712,5,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492197712,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492197715,2,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492197842,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492197862,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492197873,5,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492197873,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492197876,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492198029,2,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492198152,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492198210,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492198238,4,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492198238,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492198240,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492198349,4,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492198349,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492198352,1,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492198687,6,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492198687,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492198690,3,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492198723,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492198776,4,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492198938,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492198974,4,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492198974,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492198977,1,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492199265,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492199616,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492199808,3,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492200277,6,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492200277,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492200281,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492200374,3,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492200532,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492200549,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492200803,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492200913,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492200917,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492201198,4,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492201228,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492201228,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492201231,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492201416,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492201434,2,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492201526,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492201653,6,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492201653,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492201657,2,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492202037,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492202161,6,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492202161,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492202164,3,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492202189,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492202358,5,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492202358,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492202361,2,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492202529,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492202743,5,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492202743,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492202746,2,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492203121,6,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492203121,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492203124,3,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492203187,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492203185,5,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492203185,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492203188,2,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492203476,3,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492203688,5,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492203688,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492203691,2,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492203778,4,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492204016,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492204050,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492204121,3,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492204149,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492204199,3,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492204199,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492204201,1,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492204315,2,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492204945,5,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492204945,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492204948,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492205047,2,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492205232,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492205237,3,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492205237,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492205239,1,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492205472,3,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492205529,3,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492205529,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492205531,1,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492205713,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492205782,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492205899,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492206264,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492206281,2,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492206307,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492206598,5,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492206598,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492206601,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492206755,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492206919,5,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492206919,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492206922,2,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492207023,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,2
+1777492207168,6,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492207168,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492207171,3,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492207187,6,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492207187,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492207191,2,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492207362,4,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492207362,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492207365,1,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492207423,4,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492207730,4,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492208293,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492208423,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492208465,4,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492208465,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492208468,1,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492208519,6,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,4,0,0
+1777492208519,4,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,4,0,0
+1777492208523,2,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492208650,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492209134,3,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492209134,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492209136,1,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492209346,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492209388,4,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492209448,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492209515,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492209539,4,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492209567,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492209567,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492209570,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492209634,3,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492209771,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492209872,3,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492209975,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492209997,2,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492210527,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492210674,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492210674,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492210678,2,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492211065,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492211092,5,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492211092,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492211095,2,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492211423,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492211572,3,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492211593,2,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492211836,6,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492211836,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492211839,3,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492212119,5,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492212119,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492212122,2,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492212149,3,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492212211,3,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492212211,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492212213,1,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492212213,3,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,1,0,0
+1777492212213,1,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,1,0,0
+1777492212214,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492212525,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492212580,3,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492212580,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492212582,1,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492212600,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492212704,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492212704,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492212707,2,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492212804,2,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492212982,3,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492213232,4,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492213293,4,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492213527,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492213555,4,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492214168,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492214202,2,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492214322,2,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,2,0,0
+1777492214695,4,Orders: Health,200,OK,Trace Test Users 1-18,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492214695,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-18,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492214697,2,Orders: Health-1,200,OK,Trace Test Users 1-18,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492214724,3,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,20,20,http://localhost:8081/containers/,2,0,0
+1777492214724,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,20,20,http://localhost:8081/health,2,0,0
+1777492214726,1,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492214758,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-6,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492214965,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-1,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492215042,4,Orders: Health,200,OK,Trace Test Users 1-2,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492215042,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-2,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492215045,1,Orders: Health-1,200,OK,Trace Test Users 1-2,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492215058,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-14,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492215184,3,Carts: Dashboard,200,OK,Trace Test Users 1-12,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492215424,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-7,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492215526,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-5,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492215648,3,Carts: Dashboard,200,OK,Trace Test Users 1-15,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492215849,5,Orders: Health,200,OK,Trace Test Users 1-11,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492215849,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-11,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492215852,2,Orders: Health-1,200,OK,Trace Test Users 1-11,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492216134,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-20,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492216227,5,Orders: Health,200,OK,Trace Test Users 1-17,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492216227,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-17,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492216230,2,Orders: Health-1,200,OK,Trace Test Users 1-17,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492216396,5,Orders: Health,200,OK,Trace Test Users 1-16,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492216396,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-16,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492216399,2,Orders: Health-1,200,OK,Trace Test Users 1-16,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492216470,5,Orders: Health,200,OK,Trace Test Users 1-13,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492216470,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-13,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492216474,1,Orders: Health-1,200,OK,Trace Test Users 1-13,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492216578,6,Orders: Health,200,OK,Trace Test Users 1-10,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492216578,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-10,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492216581,3,Orders: Health-1,200,OK,Trace Test Users 1-10,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492216592,3,Carts: Dashboard,200,OK,Trace Test Users 1-4,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492216755,3,Carts: Dashboard,200,OK,Trace Test Users 1-3,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492216894,4,Orders: Health,200,OK,Trace Test Users 1-9,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492216894,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-9,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492216897,1,Orders: Health-1,200,OK,Trace Test Users 1-9,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492217198,5,Orders: Health,200,OK,Trace Test Users 1-19,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492217198,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-19,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492217202,1,Orders: Health-1,200,OK,Trace Test Users 1-19,text,true,,7181,118,20,20,http://localhost:8081/containers/,1,0,0
+1777492217236,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-8,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492217265,4,Carts: Dashboard,200,OK,Trace Test Users 1-6,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492217698,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-18,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492217878,3,Carts: Dashboard,200,OK,Trace Test Users 1-1,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492217879,3,Carts: Dashboard,200,OK,Trace Test Users 1-7,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492218001,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-2,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492218240,3,Carts: Dashboard,200,OK,Trace Test Users 1-14,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,3,0,0
+1777492218306,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-11,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492218475,6,Orders: Health,200,OK,Trace Test Users 1-15,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492218475,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-15,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492218479,2,Orders: Health-1,200,OK,Trace Test Users 1-15,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492218601,4,Carts: Dashboard,200,OK,Trace Test Users 1-5,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492218701,6,Orders: Health,200,OK,Trace Test Users 1-4,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492218701,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-4,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492218705,2,Orders: Health-1,200,OK,Trace Test Users 1-4,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492218863,5,Orders: Health,200,OK,Trace Test Users 1-12,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492218863,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-12,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492218866,2,Orders: Health-1,200,OK,Trace Test Users 1-12,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492219105,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-9,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492219163,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-17,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492219241,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-16,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492219598,0,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-10,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,0
+1777492219632,4,Carts: Dashboard,200,OK,Trace Test Users 1-20,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492219835,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-13,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492219879,4,Carts: Dashboard,200,OK,Trace Test Users 1-8,text,true,,5119,117,20,20,http://localhost:8080/dashboard/,4,0,0
+1777492220182,7,Orders: Health,200,OK,Trace Test Users 1-3,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492220182,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-3,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492220186,3,Orders: Health-1,200,OK,Trace Test Users 1-3,text,true,,7181,118,20,20,http://localhost:8081/containers/,3,0,0
+1777492220437,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-19,text,false,,2595,0,20,20,http://localhost:8082/health,0,0,1
+1777492220786,5,Orders: Health,200,OK,Trace Test Users 1-6,text,true,,7385,231,20,20,http://localhost:8081/containers/,3,0,0
+1777492220786,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-6,text,true,,204,113,20,20,http://localhost:8081/health,3,0,0
+1777492220789,2,Orders: Health-1,200,OK,Trace Test Users 1-6,text,true,,7181,118,20,20,http://localhost:8081/containers/,2,0,0
+1777492220810,3,Orders: Health,200,OK,Trace Test Users 1-1,text,true,,7385,231,19,19,http://localhost:8081/containers/,2,0,0
+1777492220810,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-1,text,true,,204,113,19,19,http://localhost:8081/health,2,0,0
+1777492220812,1,Orders: Health-1,200,OK,Trace Test Users 1-1,text,true,,7181,118,19,19,http://localhost:8081/containers/,1,0,0
+1777492220828,3,Orders: Health,200,OK,Trace Test Users 1-7,text,true,,7385,231,18,18,http://localhost:8081/containers/,2,0,0
+1777492220828,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-7,text,true,,204,113,18,18,http://localhost:8081/health,2,0,0
+1777492220830,1,Orders: Health-1,200,OK,Trace Test Users 1-7,text,true,,7181,118,18,18,http://localhost:8081/containers/,1,0,0
+1777492221155,2,Carts: Dashboard,200,OK,Trace Test Users 1-2,text,true,,5119,117,17,17,http://localhost:8080/dashboard/,2,0,0
+1777492221374,2,Carts: Dashboard,200,OK,Trace Test Users 1-18,text,true,,5119,117,16,16,http://localhost:8080/dashboard/,2,0,0
+1777492221621,4,Carts: Dashboard,200,OK,Trace Test Users 1-11,text,true,,5119,117,15,15,http://localhost:8080/dashboard/,4,0,0
+1777492221704,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-15,text,false,,2595,0,14,14,http://localhost:8082/health,0,0,1
+1777492221707,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-4,text,false,,2595,0,13,13,http://localhost:8082/health,0,0,1
+1777492221765,5,Orders: Health,200,OK,Trace Test Users 1-5,text,true,,7385,231,12,12,http://localhost:8081/containers/,3,0,0
+1777492221765,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-5,text,true,,204,113,12,12,http://localhost:8081/health,3,0,0
+1777492221768,2,Orders: Health-1,200,OK,Trace Test Users 1-5,text,true,,7181,118,12,12,http://localhost:8081/containers/,2,0,0
+1777492221794,3,Carts: Dashboard,200,OK,Trace Test Users 1-9,text,true,,5119,117,11,11,http://localhost:8080/dashboard/,3,0,0
+1777492221852,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-12,text,false,,2595,0,10,10,http://localhost:8082/health,0,0,1
+1777492222053,3,Orders: Health,200,OK,Trace Test Users 1-14,text,true,,7385,231,9,9,http://localhost:8081/containers/,2,0,0
+1777492222053,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-14,text,true,,204,113,9,9,http://localhost:8081/health,2,0,0
+1777492222055,1,Orders: Health-1,200,OK,Trace Test Users 1-14,text,true,,7181,118,9,9,http://localhost:8081/containers/,1,0,0
+1777492222477,3,Carts: Dashboard,200,OK,Trace Test Users 1-17,text,true,,5119,117,8,8,http://localhost:8080/dashboard/,3,0,0
+1777492222814,2,Carts: Dashboard,200,OK,Trace Test Users 1-16,text,true,,5119,117,7,7,http://localhost:8080/dashboard/,2,0,0
+1777492222913,1,Shipping: Health,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,Non HTTP response message: Connect to localhost:8082 [localhost/127.0.0.1] failed: Connection refused,Trace Test Users 1-3,text,false,,2595,0,6,6,http://localhost:8082/health,0,0,1
+1777492223035,3,Carts: Dashboard,200,OK,Trace Test Users 1-10,text,true,,5119,117,5,5,http://localhost:8080/dashboard/,3,0,0
+1777492223041,2,Carts: Dashboard,200,OK,Trace Test Users 1-13,text,true,,5119,117,4,4,http://localhost:8080/dashboard/,2,0,0
+1777492223081,5,Orders: Health,200,OK,Trace Test Users 1-20,text,true,,7385,231,3,3,http://localhost:8081/containers/,3,0,0
+1777492223081,3,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-20,text,true,,204,113,3,3,http://localhost:8081/health,3,0,0
+1777492223084,2,Orders: Health-1,200,OK,Trace Test Users 1-20,text,true,,7181,118,3,3,http://localhost:8081/containers/,2,0,0
+1777492223182,3,Carts: Dashboard,200,OK,Trace Test Users 1-19,text,true,,5119,117,2,2,http://localhost:8080/dashboard/,3,0,0
+1777492223201,4,Orders: Health,200,OK,Trace Test Users 1-8,text,true,,7385,231,1,1,http://localhost:8081/containers/,2,0,0
+1777492223201,2,Orders: Health-0,307,Temporary Redirect,Trace Test Users 1-8,text,true,,204,113,1,1,http://localhost:8081/health,2,0,0
+1777492223203,2,Orders: Health-1,200,OK,Trace Test Users 1-8,text,true,,7181,118,1,1,http://localhost:8081/containers/,2,0,0

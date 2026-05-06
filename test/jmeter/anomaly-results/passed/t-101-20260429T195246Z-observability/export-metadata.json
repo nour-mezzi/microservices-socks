@@ -1,0 +1,16 @@
+{
+  "anomaly_id": "t-101",
+  "run_id": "20260429T195246Z",
+  "jmeter_results_file": "/home/user/microservices-demo/test/jmeter/anomaly-results/t-101-results.csv",
+  "jmeter_test_start_epoch": 1777492366,
+  "jmeter_test_end_epoch": 1777497769,
+  "expanded_window_start_epoch": 1777491466,
+  "expanded_window_end_epoch": 1777498669,
+  "expanded_window_start": "2026-04-29T19:37:46Z",
+  "expanded_window_end": "2026-04-29T21:37:49Z",
+  "expand_before_seconds": 900,
+  "expand_after_seconds": 900,
+  "prometheus_url": "http://localhost:9090",
+  "loki_url": "http://localhost:3100",
+  "tempo_url": "http://localhost:3200"
+}

@@ -4,51 +4,52 @@ groups:
   rules:
   # ERROR RATE ALERTS
   - alert: HighErrorRate
-    expr: rate(request_duration_seconds_count{status_code="500"}[1m]) > .1
+    expr: rate(http_requests_total{status=~"5.."}[1m]) > 0.1 or rate(request_total{status=~"5.."}[1m]) > 0.1
     for: 1m
     labels:
       severity: email
     annotations:
-      summary: "High HTTP 500 error rates"
-      description: "Rate of HTTP 500 errors per 1 minutes: {{ $value }}"
-  
+      summary: "High HTTP 5xx error rates"
+      description: "Rate of HTTP 5xx errors per minute: {{ $value }}"
+
   - alert: HighErrorRateOnEndpoint
-    expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+    expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05 or rate(request_total{status=~"5.."}[5m]) > 0.05
     for: 2m
     labels:
       severity: warning
     annotations:
-      summary: "High error rate on {{ $labels.endpoint }} ({{ $labels.service }})"
+      summary: "High error rate on {{ $labels.job }} ({{ $labels.service }})"
       description: "Error rate: {{ $value | humanizePercentage }}"
-  
+
   # LATENCY ALERTS
   - alert: HighRequestLatency
-    expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1.0
+    expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1.0 or histogram_quantile(0.95, rate(request_duration_seconds_bucket[5m])) > 1.0
     for: 2m
     labels:
       severity: warning
     annotations:
       summary: "High request latency detected"
-      description: "P95 latency: {{ $value }}s on {{ $labels.service }}"
-  
+      description: "P95 latency: {{ $value }}s on {{ $labels.job }}"
+
   - alert: P99LatencyHigh
-    expr: histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m])) > 2.0
+    expr: histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m])) > 2.0 or histogram_quantile(0.99, rate(request_duration_seconds_bucket[5m])) > 2.0
     for: 2m
     labels:
       severity: critical
     annotations:
       summary: "P99 latency critically high"
-      description: "P99 latency: {{ $value }}s on {{ $labels.service }}"
+      description: "P99 latency: {{ $value }}s on {{ $labels.job }}"
+
   
   # CONTAINER RESTART ALERTS
   - alert: ContainerRestarts
-    expr: increase(container_last_seen{id!=""}[15m]) > 0
+    expr: increase(container_restart_count{container_label_com_docker_compose_service!=""}[15m]) > 0
     for: 1m
     labels:
       severity: warning
     annotations:
-      summary: "Container {{ $labels.name }} restarted"
-      description: "Container {{ $labels.name }} has restarted {{ $value }} times in 15 minutes"
+      summary: "Container {{ $labels.container_label_com_docker_compose_service }} restarted"
+      description: "Container {{ $labels.container_label_com_docker_compose_service }} has restarted {{ $value }} times in 15 minutes"
   
   # RESOURCE USAGE ALERTS
   - alert: HighCPUUsage
@@ -78,7 +79,35 @@ groups:
     annotations:
       summary: "Service {{ $labels.job }} is down"
       description: "Service {{ $labels.job }} on {{ $labels.instance }} is not responding"
-  
+
+  # PROMETHEUS SCRAPE FAILURE ALERTS
+  - alert: PrometheusScrapeFailed
+    expr: up{job!=""}  == 0 or scrape_duration_seconds > 10
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Prometheus scrape failed for {{ $labels.job }}"
+      description: "Target {{ $labels.instance }} scrape failed or timed out (> 10s). Check Prometheus targets at http://localhost:9090/targets"
+
+  - alert: PrometheusTargetDown
+    expr: count(up == 0) > 0
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "{{ $value }} Prometheus target(s) down"
+      description: "One or more monitoring targets are not responding. Visit http://localhost:9090/targets to diagnose"
+
+  - alert: PrometheusHighScrapeLatency
+    expr: scrape_duration_seconds > 5
+    for: 3m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Slow scrape for {{ $labels.job }}"
+      description: "Scrape taking {{ $value }}s (> 5s threshold). May indicate performance issues or network delays"
+
   # TIMEOUT/EXCEPTION ALERTS
   - alert: HighTimeoutRate
     expr: rate(timeout_exceptions_total[5m]) > 0.01

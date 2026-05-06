@@ -17,54 +17,60 @@ alerting:
 
 scrape_configs:
     - job_name: "frontend"
-      scrape_interval: 5s
-      metrics_path: 'metrics'
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['edge-router']
+        - targets: ['front-end:8079']
 
-    # The job name assigned to scraped metrics by default.
     - job_name: "catalogue"
-      # How frequently to scrape targets from this job.
-      scrape_interval: 5s
-      # List of labeled statically configured targets for this job.
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        # The targets specified by the static config.
-        - targets: ['catalogue']
+        - targets: ['catalogue:8081']
 
     - job_name: "payment"
-      scrape_interval: 5s
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['payment']
+        - targets: ['payment:8080']
 
     - job_name: "user"
-      scrape_interval: 5s
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['user']
+        - targets: ['user:8084']
 
     - job_name: "orders"
-      scrape_interval: 5s
-      # The HTTP resource path on which to fetch metrics from targets.
-      metrics_path: 'metrics'
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['orders']
+        - targets: ['orders:80']
 
     - job_name: "cart"
-      scrape_interval: 5s
-      metrics_path: 'metrics'
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['carts']
+        - targets: ['carts:80']
 
     - job_name: "shipping"
-      scrape_interval: 5s
-      metrics_path: 'metrics'
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/metrics'
       static_configs:
-        - targets: ['shipping']
+        - targets: ['shipping:80']
 
     - job_name: "queue-master"
-      scrape_interval: 5s
-      metrics_path: 'prometheus'
+      scrape_interval: 15s
+      scrape_timeout: 10s
+      metrics_path: '/prometheus'
       static_configs:
-        - targets: ['queue-master']
+        - targets: ['queue-master:80']
 
     - job_name: 'node-exporter'
       scrape_interval: 5s

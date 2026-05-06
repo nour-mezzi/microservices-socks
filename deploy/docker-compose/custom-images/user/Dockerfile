@@ -7,7 +7,7 @@ RUN echo '#!/bin/sh' > /usr/local/bin/wrapper.sh && \
     echo 'echo "Service: user - OpenTelemetry environment configured"' >> /usr/local/bin/wrapper.sh && \
     echo 'echo "OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME}"' >> /usr/local/bin/wrapper.sh && \
     echo 'echo "OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT}"' >> /usr/local/bin/wrapper.sh && \
-    echo 'exec /app "$@"' >> /usr/local/bin/wrapper.sh && \
+    echo 'exec /user "$@"' >> /usr/local/bin/wrapper.sh && \
     chmod +x /usr/local/bin/wrapper.sh
 
 USER ${USER:-1000}

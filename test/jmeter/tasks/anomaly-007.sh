@@ -30,74 +30,60 @@ set -euo pipefail
 log_info "[ANOMALY-007] Setting up Network Latency test..."
 
 # Configuration for this anomaly
-LATENCY_MS=500                    # Add 500ms latency
-JITTER_MS=20                      # ±20ms jitter
-NETWORK_INTERFACE="eth0"          # Common in Docker
-DOCKER_NETWORK="microservices-demo_default"  # Adjust to actual network name
+LATENCY_MS=500                       # Add 500ms latency
+JITTER_MS=20                         # ±20ms jitter
+DOCKER_NETWORK="docker-compose_default"
 
 log_info "Latency configuration: ${LATENCY_MS}ms ±${JITTER_MS}ms"
-log_info "Network interface: $NETWORK_INTERFACE"
 
-# Check if tc is available and user has permissions
-if ! command -v tc &> /dev/null; then
-  log_error "traffic control (tc) not available. Install with: apt-get install iproute2"
+# Resolve the host bridge interface from the Docker network ID
+log_info "Detecting Docker bridge interface for network: $DOCKER_NETWORK"
+BRIDGE_NET_ID=$(docker network inspect "$DOCKER_NETWORK" --format '{{slice .Id 0 12}}' 2>/dev/null)
+if [[ -z "$BRIDGE_NET_ID" ]]; then
+  log_error "Docker network '$DOCKER_NETWORK' not found. Is the stack running?"
   exit 1
 fi
+BRIDGE_IF="br-${BRIDGE_NET_ID}"
+log_info "Bridge interface: $BRIDGE_IF"
 
-# Find the correct network interface for Docker Compose services
-log_info "Detecting Docker network interface..."
+# tc runner — tries sudo first, falls back to a privileged container with net=host
+run_tc() {
+  if sudo -n tc "$@" 2>/dev/null; then
+    return 0
+  fi
+  docker run --rm --privileged --net=host alpine \
+    sh -c "apk add -q --no-cache iproute2 2>/dev/null && tc $*"
+}
 
-# Get a running container from the network
-SAMPLE_CONTAINER=$(docker ps --filter "network=$DOCKER_NETWORK" -q | head -1)
-if [[ -z "$SAMPLE_CONTAINER" ]]; then
-  log_warning "Could not find container on network $DOCKER_NETWORK"
-  log_info "Using container namespace approach instead..."
-  # Alternative: use veth interface directly
-fi
+# Remove any existing qdisc on the bridge before adding
+log_info "Clearing any existing tc qdisc on $BRIDGE_IF..."
+run_tc qdisc del dev "$BRIDGE_IF" root 2>/dev/null || true
 
-# Pre-test verification
-log_info "Verifying network baseline..."
-BASELINE_LATENCY=$(ping -c 1 localhost 2>/dev/null | grep "time=" | sed 's/.*time=\([^ ]*\).*/\1/' || echo "N/A")
-log_info "Baseline latency to localhost: $BASELINE_LATENCY"
-
-# Apply network latency using tc
-log_info "Applying network latency with tc..."
-
-# Method 1: Apply to all eth0 interfaces in container namespace
-if sudo tc qdisc show dev "$NETWORK_INTERFACE" 2>/dev/null | grep -q "root"; then
-  log_warning "tc qdisc already exists, removing..."
-  sudo tc qdisc del dev "$NETWORK_INTERFACE" root 2>/dev/null || true
-fi
-
-# Add netem (network emulation) qdisc
-log_info "Command: sudo tc qdisc add dev $NETWORK_INTERFACE root netem delay ${LATENCY_MS}ms ${JITTER_MS}ms distribution normal"
-sudo tc qdisc add dev "$NETWORK_INTERFACE" root netem delay "${LATENCY_MS}ms" "${JITTER_MS}ms" distribution normal || {
-  log_error "Failed to apply tc rule. May need: sudo usermod -aG docker $USER"
+# Apply netem latency on the Docker bridge — affects all inter-service traffic
+log_info "Applying ${LATENCY_MS}ms ±${JITTER_MS}ms netem latency on $BRIDGE_IF..."
+run_tc qdisc add dev "$BRIDGE_IF" root netem delay "${LATENCY_MS}ms" "${JITTER_MS}ms" distribution normal || {
+  log_error "Failed to apply tc netem rule on $BRIDGE_IF"
   exit 1
 }
 
-log_success "Network latency applied: ${LATENCY_MS}ms ±${JITTER_MS}ms"
+log_success "Network latency applied on $BRIDGE_IF: ${LATENCY_MS}ms ±${JITTER_MS}ms"
 
-# Verify latency was applied
-sleep 1
-ACTUAL_LATENCY=$(ping -c 1 localhost 2>/dev/null | grep "time=" | sed 's/.*time=\([^ ]*\).*/\1/' || echo "N/A")
-log_info "Actual latency to localhost after tc: $ACTUAL_LATENCY"
+# Define cleanup — mirrors the same run_tc helper (inline for eval context)
+CLEANUP_ANOMALY="
+  log_info 'Cleaning up network latency (ANOMALY-007)...'
+  if sudo -n tc qdisc del dev ${BRIDGE_IF} root 2>/dev/null; then
+    true
+  else
+    docker run --rm --privileged --net=host alpine \
+      sh -c 'apk add -q --no-cache iproute2 2>/dev/null && tc qdisc del dev ${BRIDGE_IF} root' 2>/dev/null || true
+  fi
+  log_success 'Network latency removed from ${BRIDGE_IF}'
+"
 
-# Define cleanup function
-CLEANUP_ANOMALY='
-  log_info "Cleaning up network latency (ANOMALY-007)..."
-  log_info "Removing tc qdisc..."
-  sudo tc qdisc del dev '"$NETWORK_INTERFACE"' root 2>/dev/null || log_warning "tc qdisc not found"
-  sleep 1
-  FINAL_LATENCY=$(ping -c 1 localhost 2>/dev/null | grep "time=" | sed "s/.*time=\([^ ]*\).*/\1/" || echo "N/A")
-  log_info "Network latency after cleanup: $FINAL_LATENCY"
-  log_success "Network latency cleanup complete"
-'
-
-# Test-specific configuration - moderate load to avoid other confounds
-USERS=100
-RAMPUP=60
-DURATION=600
+# Test-specific defaults - only apply if not already set by the caller
+USERS=${USERS:-100}
+RAMPUP=${RAMPUP:-60}
+DURATION=${DURATION:-600}
 
 log_success "[ANOMALY-007] Network latency setup complete"
 log_info "Starting load test with artificial network delay..."
